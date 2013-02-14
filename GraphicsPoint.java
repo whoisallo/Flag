@@ -15,8 +15,35 @@ class GraphicsPoint {
 	 * @param y - y coordinate of point
 	 */
 	public GraphicsPoint(int x, int y) {
-		this.x = x;
-		this.y = y;
+		setX(x);
+		setY(y);
+	}
+
+	/**
+	 * Getters and Setters
+	 */
+	
+	/**
+	 * limit x to positive integers
+	 */
+	public void setX(int x) {
+		if (x >= 0) {
+			this.x = x;
+		}
+	}
+
+	public int getX(){
+		return this.x;
+	}
+
+	public void setY(int y) {
+		if (y >= 0) {
+			this.y = y;
+		}
+	}
+
+	public int getY(){
+		return this.y;
 	}
 
 }
