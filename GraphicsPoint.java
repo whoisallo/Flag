@@ -15,8 +15,7 @@ class GraphicsPoint {
 	 * @param y - y coordinate of point
 	 */
 	public GraphicsPoint(int x, int y) {
-		setX(x);
-		setY(y);
+		moveTo(x, y);
 	}
 
 	/**
@@ -44,6 +43,13 @@ class GraphicsPoint {
 
 	public int getY(){
 		return this.y;
+	}
+
+	// methods
+	
+	public void moveTo(int x, int y) {
+		setX(x);
+		setY(y);
 	}
 
 }

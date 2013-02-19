@@ -6,24 +6,17 @@
 
 import java.awt.Graphics;
 
-
-class Line extends JFrame{
+class Line {
 
 	private GraphicsPoint a, b;
 
 	public Line(int x0, int y0, int x1, int y1) {
-		p0 = new GraphicsPoint(x0, y0);
-		p1 = new GraphicsPoint(x1, y1);
-		this.(p0, p1);
+		this(new GraphicsPoint(x0, y0), new GraphicsPoint(x1, y1));
 	}
 
 	public Line(GraphicsPoint a, GraphicsPoint b) {
 		this.a = a;
 		this.b = b;
-	}
-
-	public void Paint(Graphics g) {
-		g.drawLine(p0.getX(),p0.getY(),p1.getX(),p1.getY());
 	}
 
 	/**
@@ -33,13 +26,17 @@ class Line extends JFrame{
 	public void setA(GraphicsPoint a) {
 		this.a = a;
 	}
-
-	public void SetA(int x, int y) {
+ 
+	public void setA(int x, int y) {
 		setA(new GraphicsPoint(x, y));
 	}
 
 	public GraphicsPoint getA() {
 		return a;
+	}
+
+	public GraphicsPoint getB() {
+		return b;
 	}
 
 	public void draw(Graphics g) {
